@@ -1,0 +1,1 @@
+SELECT Country.* FROM XF.Country as Country LEFT JOIN XF.City as City ON Country.CountryID = City.CountryID GROUP BY Country.Name HAVING SUM(Population) > 400;

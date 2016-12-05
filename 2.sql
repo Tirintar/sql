@@ -1,0 +1,1 @@
+SELECT Country.Name FROM XF.Country as Country LEFT JOIN XF.City as City ON Country.CountryID = City.CountryID LEFT JOIN XF.Building as Building ON City.CityID = Building.CityID GROUP BY Country.Name HAVING COUNT(Building.BuildingID) = 0;
